@@ -1,0 +1,11 @@
+commit 7985f2b74f13f53e17f979b1dd2dafc98a66685d
+Author: Daniil Bondarau <Slayerdog4@gmail.com>
+Date:   Tue Feb 6 19:29:35 2018 +0300
+
+    changed status.txt
+
+commit 88a6a1a7f05f59576929e423cf9fae130209a375
+Author: Daniil Bondarau <Slayerdog4@gmail.com>
+Date:   Tue Feb 6 19:27:34 2018 +0300
+
+    add .gitignore
