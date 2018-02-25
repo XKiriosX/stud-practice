@@ -4,17 +4,24 @@ header {
     text-align: center;
     position: fixed;
     width: 100%;
+    height: 33%;
+    margin-left: 0;
 }
 #header-text-container {
     width: 35%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3%;
     position: relative;
 }
 #head-text {
     font-family: Billabong;
     font-size: 100px;
     height: 100%;
+}
+.logo {
+    width: 110%;
+
 }
 /*----------*/
 
@@ -31,7 +38,8 @@ header {
 #login-box {
     width: 50%;
     position: fixed;
-    margin-right: 4%;
+    margin-top: 1%;
+    margin-right: 7%;
 }
 
 .material-textfield {
