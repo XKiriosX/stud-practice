@@ -367,3 +367,13 @@ input[type=text]:focus {
 #like-btn {
     height: 25%;
 }
+
+#caption {
+    position: relative;
+}
+
+#hashtags {
+    position: absolute;
+    bottom: 0;
+    -webkit-text-stroke: 0.5px #000;
+}

@@ -1,7 +1,18 @@
 //==========================MODAL BOX===================================
 'use strict';
-(function() {
-    var audio = new Audio('res/DIMOON.mp3');
+(function(){
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    /*var artile = {
+        img: [ {
+                imgSrc: ,
+                description: ,
+                valueOfLucas: ,
+            }
+        ]
+    };*/
+    var audio = new Audio('res/840fd6a3e6b364.mp3');
     function handleInsta() {
         audio.volume = 0.04;
         audio.play();
@@ -14,20 +25,6 @@
     var insta = document.querySelector('.instagram');
     insta.addEventListener('mouseover', handleInsta);
     insta.addEventListener('mouseout', undoHandleInsta);
-}());
-(function(){
-    var modal = document.getElementById('myModal');
-    console.log(modal);
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    /*var artile = {
-        img: [ {
-                imgSrc: ,
-                description: ,
-                valueOfLucas: ,
-            }
-        ]
-    };*/
     var articles = [
         {
             id: '1',
@@ -80,7 +77,8 @@
         }
         var posts = takePhotoPosts();
         skip = skip || 0;
-        top = top || 0;
+        top = top || posts.length;
+
     }
     
     function takePhotoPosts() {
@@ -98,29 +96,47 @@
     function createArtile( ){
 
     }*/
+    var likeImg = document.getElementById('like-btn');
+    likeImg.onclick = function (ev) {
+        likeImg.src = "res/Liked.png";
+    }
+    
     function aa(e) {
         modal.style.display = "block";
-        var nickName = document.createTextNode(this.alt);
-        nickName.style.color = "#0ff";
-        captionText.appendChild(nickName);
         modalImg.src = this.src;
+        var nickname = document.querySelector('#nickname');
         captionText.style.font = "italic bold 20px arial";
         captionText.style.color = "#000";
+        document.getElementById('img-description').style.fontSize = "15px";
+        var hashtags = document.getElementById('hashtags');
+        hashtags.style.color = "#6464ff";
+        nickname.innerHTML = 'Nova';
+        nickname.style.color = "#48464b";
+        nickname.style.fontSize = "30px";
         var lukas = new Image();
         lukas.src = 'res/Like.png';
         lukas.id = "like-btn";
     }
-
-
-
 // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
+    window.onclick = function (ev) {
+        if (ev.target == modal) {
+            modal.style.display = "none";
+        }
     }
 }());
-// Get the image and insert it inside the modal - use its "alt" text as a caption
 
+function addPhotoPost(post) {
+    var div = document.createElement('div');
+    div.className = "card-content1";
+    var img = document.createElement('img');
+    img.className = "dank";
+    img.src = post.imgSrc;
+    div.appendChild(img);
+
+}
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
 //==========================LIKE BUTTON=================================
