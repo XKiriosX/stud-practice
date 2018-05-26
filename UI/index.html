@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,4 +34,55 @@
 </header>
     <p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </p>
 </body>
+=======
+<html>
+    <head>
+         <!--<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>-->
+        <link rel="stylesheet" href="style.css">
+		
+    </head>
+    
+    <body>
+        <header >
+            <div class="box">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+            </div>
+            <!-- Login box -->
+            <section class="user-info" style="display: none">
+              <div class="username"></div>
+              <button class="log-out" onclick="logout()">log out</button>
+            </section>
+            <form class="wrapper" action="javascript:void(0)" method="post">
+                <div class="material-textfield blue">
+                    <input class="username" type="text" required/>
+                    <label data-content="username">username</label>
+                </div>
+
+                <div class="material-textfield red">
+                    <input class="password" type="password" required/>
+                    <label data-content="password">password</label>
+                </div>
+
+                <div>
+                    <input type="submit" onclick="validateUser()" value="Log in"/>
+                    <input type="button" value="Forgot password?">
+                </div>
+
+            </form>
+        </header>
+        
+        <section class="card"></section>
+
+
+        <footer>
+            <div class="footer-content">
+                Daniel "Kirios" Bondarau, 6gr FAMCS, 2018
+                <a class="footer-mail" href="mailto:slayerdog4@gmail.com">slayerdog4@gmail.com</a>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+
+    </body>
+>>>>>>> page-design
 </html>
