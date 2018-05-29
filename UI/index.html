@@ -1,36 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test makeup</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<header>
-    <div id="header-text-container">
-        <div></div>
-        <div id="logo"><img class="logo" src="src/Web-logo.png"></div>
-        <!--<div><h1 id="head-text">BOOH.COM</h1></div>-->
-        <div class="wrapper" id="login-box">
-            <form class="wrapper" action="/login" method="post">
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    
+    <body>
+        <header >
+            <div class="box">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="Search..." />
+            </div>
+            <section class="user-info" style="display: none">
+              <div class="username"></div>
+              <button class="log-out" onclick="logout()">log out</button>
+            </section>
+            <form class="wrapper" action="javascript:void(0)" method="post">
                 <div class="material-textfield blue">
-                    <input type="text" required/>
+                    <input class="username-input" type="text" required/>
                     <label data-content="username">username</label>
                 </div>
 
                 <div class="material-textfield red">
-                    <input type="password" required/>
+                    <input class="password" type="password" required/>
                     <label data-content="password">password</label>
                 </div>
 
                 <div>
-                    <input type="submit" value="Log in"/>
+                    <input type="submit" onclick="validateUser()" value="Log in"/>
+                    <input type="button" value="Forgot password?">
                 </div>
 
             </form>
-        </div>
-    </div>
-</header>
-    <p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </p>
-</body>
+          <div class="upload-content">
+
+          </div>
+        </header>
+        
+        <section class="card"></section>
+
+
+        <footer>
+            <div class="footer-content">
+                Daniel "Kirios" Bondarau, 6gr FAMCS, 2018
+                <a class="footer-mail" href="mailto:slayerdog4@gmail.com">slayerdog4@gmail.com</a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="main.js"></script>
+
+    </body>
 </html>
